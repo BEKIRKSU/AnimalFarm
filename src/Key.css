@@ -1,0 +1,34 @@
+.key-container {
+    margin-top: 10px;
+    margin-left: 1.5rem;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    width: 200px;
+    height: 9.5rem;
+  }
+  
+  .key-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .key-color {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+  }
+  
+  .key-color.morning {
+    background-color: #4CAF50;
+  }
+  
+  .key-color.evening {
+    background-color: #FFC107;
+  }
+  
+  .key-color.both {
+    background-color: rgb(202, 123, 123);
+  }
+  

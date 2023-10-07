@@ -1,0 +1,21 @@
+.footer {
+    background: linear-gradient(45deg, #6B8BFE 30%, #8E53FF 90%);
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 3rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center; 
+    justify-content: center;  
+    height: 100%; 
+    width: 100%;  
+    text-align: center;
+}
