@@ -37,7 +37,7 @@ const BookingForm = () => {
       type="text"
       value={name}
       onChange={(e) => {
-        const formattedValue = e.target.value.replace(/[^a-zA-Z\s]/g, ''); 
+        const formattedValue = e.target.value; 
         setName(formatName(formattedValue));
       }}
       className='inputStyle'
