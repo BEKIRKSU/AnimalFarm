@@ -15,7 +15,7 @@ const BookingForm = () => {
     const data = { name, email, session, date };
 
     try { 
-      const response = await axios.post('http://localhost:3009/retrieveData', data);
+      const response = await axios.post('https://animal-farm-api.onrender.com/retrievedata', data);
       console.log(response.data);
     } 
     catch (error) {
