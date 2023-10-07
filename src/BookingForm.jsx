@@ -23,12 +23,6 @@ const BookingForm = () => {
     }
   };
 
-  function formatName(name) {
-    return name.split(' ').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-    ).join(' ');
-  }
-
   return (
     <div className='Calendar-Inputs'>
      <form className='formStyle' onSubmit={handleSubmit}>
@@ -38,7 +32,7 @@ const BookingForm = () => {
       value={name}
       onChange={(e) => {
         const formattedValue = e.target.value; 
-        setName(formatName(formattedValue));
+        setName(formattedValue);
       }}
       className='inputStyle'
     />
