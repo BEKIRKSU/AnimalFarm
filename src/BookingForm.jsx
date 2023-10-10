@@ -8,6 +8,21 @@ const BookingForm = () => {
   const [email, setEmail] = useState('');
   const [session, setSession] = useState('Morning');
   const [date, setDate] = useState('');
+  // const [bookedDates, setBookedDates] = useState([]);  // Array to hold booked dates
+
+  // useEffect(() => {
+  //   // Fetch booked dates when the component is mounted
+  //   const fetchBookedDates = async () => {
+  //     try {
+  //       const response = await axios.get('https://animal-farm-api.onrender.com/retrievedata');
+  //       setBookedDates(response.data.map(item => item.date));  // Assuming the data is an array of objects with a 'date' field
+  //     } catch (error) {
+  //       console.error("Error fetching booked dates!", error);
+  //     }
+  //   };
+
+  //   fetchBookedDates();
+  // }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
