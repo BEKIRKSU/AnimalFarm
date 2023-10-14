@@ -1,7 +1,6 @@
 import Key from './Key';
 import Calendar from './Calendar';
-import BookingForm from './BookingForm';
-
+import { Link } from 'react-router-dom';
 
 function ManagerView() {
     return (
@@ -9,7 +8,7 @@ function ManagerView() {
             <div className='Calendar-Inputs'>
                 <Key />
                 <Calendar />
-                <BookingForm />
+                <Link to="/userbooking" className="navbar-link">Volunteer Bookings</Link>
             </div>
         </>
     );
