@@ -5,7 +5,7 @@ import { UserBookingList } from './UserBooking';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Footer from './Footer';
-import HomeView from './HomeView';
+import VolunteerView from './VolunteerView';
 import Home from './Home';
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/userbooking" element={<UserBookingList data={data} />} />
           <Route path="/" element={<Home />} />
-          <Route path="/HomeView" element={<HomeView />} />
+          <Route path="/VolunteerView" element={<VolunteerView />} />
         </Routes>
         <Footer />
       </div>

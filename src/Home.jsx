@@ -6,11 +6,11 @@ function Home() {
   const navigate = useNavigate();
   const handleGetStartedClick = () => {
     
-    navigate('/HomeView');
+    navigate('/VolunteerView');
   };
 
  const handleDemoClick = () => {
-    navigate('/demo');
+    navigate('/');
 };
 
     return (
