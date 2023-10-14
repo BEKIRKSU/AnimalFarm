@@ -23,10 +23,10 @@ function Home() {
                 {/* <p>Volunteer or Manager</p> */}
                 </div>
                <div className="button-group">
-          <button onClick={handleGetStartedClick} className="journey-on-button">
+          <button onClick={handleGetStartedClick} className="volunteer-login-button">
             Volunteer
           </button>
-          <button onClick={handleDemoClick} className="demo-button">Manager</button>
+          <button onClick={handleDemoClick} className="manager-login-button">Manager</button>
         </div>
             </main>
         </div>
