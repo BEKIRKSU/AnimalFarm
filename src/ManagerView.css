@@ -31,3 +31,28 @@
     align-items: center;
   }
   
+
+.userbooking-link {
+    margin-left: auto; 
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;  
+    font-weight: 430;  
+    letter-spacing: 1px; 
+    text-decoration: none;
+    border-radius: 12px;  
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  
+    background: linear-gradient(45deg, #6B8BFE 30%, #8E53FF 90%);
+    margin-right: 2vh;
+}
+
+.userbooking-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05); 
+}
+
+
+
+.userbooking-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
