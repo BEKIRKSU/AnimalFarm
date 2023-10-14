@@ -28,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/userbooking" element={<UserBookingList data={data} />} />
           <Route path="/" element={<Home />} />
+          <Route path="/HomeView" element={<HomeView />} />
         </Routes>
         <Footer />
       </div>
