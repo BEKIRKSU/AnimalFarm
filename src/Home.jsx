@@ -18,7 +18,7 @@ function Home() {
             <main className="content">
               <div className="typewriter">
                 <h1>Welcome to Bekir's Citflik.</h1>
-                <p>Embark on a journey of deep practice with us, overcoming initial challenges to attain coding expertise.</p>
+                {/* <p>Volunteer or Manager</p> */}
                 </div>
                <div className="button-group">
           <button onClick={handleGetStartedClick} className="journey-on-button">

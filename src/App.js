@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Footer from './Footer';
 import HomeView from './HomeView';
+import Home from './Home';
 
 function App() {
   const [data, setData] = useState([]);
@@ -26,7 +27,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/userbooking" element={<UserBookingList data={data} />} />
-          <Route path="/" element={<HomeView />} />
+          <Route path="/" element={<Home />} />
         </Routes>
         <Footer />
       </div>
