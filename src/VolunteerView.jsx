@@ -2,6 +2,7 @@ import React from 'react';
 import Key from './Key';
 import Calendar from './Calendar';
 import BookingForm from './BookingForm';
+import "./VolunteerView.css"
 
 function VolunteerView() {
     return (

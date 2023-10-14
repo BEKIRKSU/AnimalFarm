@@ -27,12 +27,6 @@
   color: #61dafb;
 }
 
-.Calendar-Inputs {
-   display: flex;
-   flex-direction: row;
-   margin-top: 2rem; 
-}
-
 .red {
   background-color: rgb(202, 123, 123);
 }
