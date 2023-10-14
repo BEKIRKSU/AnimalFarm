@@ -4,13 +4,13 @@ import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
-  const handleGetStartedClick = () => {
+  const handleVolunteerLoginClick = () => {
     
     navigate('/VolunteerView');
   };
 
- const handleDemoClick = () => {
-    navigate('/');
+ const handleManagerViewClick = () => {
+    navigate('/ManagerView');
 };
 
     return (
@@ -21,10 +21,10 @@ function Home() {
                 {/* <p>Volunteer or Manager</p> */}
                 </div>
                <div className="button-group">
-          <button onClick={handleGetStartedClick} className="volunteer-login-button">
+          <button onClick={handleVolunteerLoginClick} className="volunteer-login-button">
             Volunteer
           </button>
-          <button onClick={handleDemoClick} className="manager-login-button">Manager</button>
+          <button onClick={handleManagerViewClick} className="manager-login-button">Manager</button>
         </div>
             </main>
         </div>

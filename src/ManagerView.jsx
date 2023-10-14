@@ -1,20 +1,18 @@
-import React from 'react';
 import Key from './Key';
 import Calendar from './Calendar';
-import UserBooking from './UserBooking';
-import "./VolunteerView.css"
-import UserBooking from './UserBooking';
+import BookingForm from './BookingForm';
 
-function VolunteerView() {
+
+function ManagerView() {
     return (
         <>
             <div className='Calendar-Inputs'>
                 <Key />
                 <Calendar />
-                <UserBooking />
+                <BookingForm />
             </div>
         </>
     );
 }
 
-export default VolunteerView;
+export default ManagerView;

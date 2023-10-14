@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Footer from './Footer';
 import VolunteerView from './VolunteerView';
-import ManagerView from './VolunteerView';
+import ManagerView from './ManagerView';
 import Home from './Home';
 
 function App() {
