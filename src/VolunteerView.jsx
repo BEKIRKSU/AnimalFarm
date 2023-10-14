@@ -2,17 +2,19 @@ import React from 'react';
 import Key from './Key';
 import Calendar from './Calendar';
 import BookingForm from './BookingForm';
+import UserBooking from './UserBooking';
 
-function HomeView() {
+function VolunteerView() {
     return (
         <>
             <div className='Calendar-Inputs'>
                 <Key />
                 <Calendar />
+                {/* <UserBooking /> */}
+                <BookingForm />
             </div>
-            <BookingForm />
         </>
     );
 }
 
-export default HomeView;
+export default VolunteerView;
