@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Home.css";
+import Key from './Key';
 
 function Home() {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function Home() {
             <main className="content">
               <div className="typewriter">
                 <h1>Welcome to Bekir's Citflik.</h1>
+                <Key />
                 {/* <p>Volunteer or Manager</p> */}
                 </div>
                <div className="button-group">
