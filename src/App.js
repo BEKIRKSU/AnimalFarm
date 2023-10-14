@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Footer from './Footer';
 import VolunteerView from './VolunteerView';
+import ManagerView from './VolunteerView';
 import Home from './Home';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/userbooking" element={<UserBookingList data={data} />} />
           <Route path="/" element={<Home />} />
           <Route path="/VolunteerView" element={<VolunteerView />} />
+          <Route path="/ManagerView" element={<ManagerView />} />
         </Routes>
         <Footer />
       </div>

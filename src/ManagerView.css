@@ -1,0 +1,33 @@
+.Calendar-Inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem; 
+    margin-top: 2rem;
+  }
+  
+  .Key {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Calendar {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+  
+  .BookingForm {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
