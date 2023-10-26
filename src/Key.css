@@ -1,12 +1,12 @@
 .key-container {
-    margin-top: 10px;
-    margin-left: 1.5rem;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 0.5rem;
-    width: 200px;
-    height: 9.5rem;
-  }
+  margin-top: 10px;
+  margin-left: 1.5rem;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  width: 200px;
+  height: 9.5rem;
+}
   
   .key-item {
     display: flex;

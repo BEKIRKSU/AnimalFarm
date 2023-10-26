@@ -8,32 +8,27 @@ const BookingForm = () => {
   const [email, setEmail] = useState('');
   const [session, setSession] = useState('Morning');
   const [date, setDate] = useState('');
-  // const [bookedDates, setBookedDates] = useState([]);  // Array to hold booked dates
-
-  // useEffect(() => {
-  //   // Fetch booked dates when the component is mounted
-  //   const fetchBookedDates = async () => {
-  //     try {
-  //       const response = await axios.get('https://animal-farm-api.onrender.com/retrievedata');
-  //       setBookedDates(response.data.map(item => item.date));  // Assuming the data is an array of objects with a 'date' field
-  //     } catch (error) {
-  //       console.error("Error fetching booked dates!", error);
-  //     }
-  //   };
-
-  //   fetchBookedDates();
-  // }, []);
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const data = { name, email, session, date };
 
-    try { 
+    try {
       const response = await axios.post('https://animal-farm-api.onrender.com/retrievedata', data);
       console.log(response.data);
-    } 
-    catch (error) {
+
+      const isMorningBooked = response.data.morning;
+      const isEveningBooked = response.data.evening;
+
+      if (session === 'Morning' && isMorningBooked) {
+        alert('Morning session is already booked for this date. Please choose another date or session.');
+      } else if (session === 'Evening' && isEveningBooked) {
+        alert('Evening session is already booked for this date. Please choose another date or session.');
+      } else {
+        console.log('Booking successful!');
+      }
+    } catch (error) {
       console.error("Error sending data!", error);
     }
   };
