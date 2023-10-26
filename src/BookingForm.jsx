@@ -43,7 +43,7 @@ const BookingForm = () => {
     });
   
     if (isDataExists) {
-      alert('Booking for this date and session already exists. Please choose another date or session.');
+      alert('Booking for this date and session may already exist. Please review the calendar for a more suitable date or session to book.');
       return;
     }
 
