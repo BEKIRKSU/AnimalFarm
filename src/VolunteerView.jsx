@@ -11,9 +11,9 @@ function VolunteerView() {
             <div className='Calendar-Inputs'>
                 <Key />
                 <Calendar />
-                <BookingForm />
-                <Footer />
             </div>
+            <div className='BookingFormVolunteerView'><BookingForm /></div>
+            <div><Footer /></div>
         </>
     );
 }

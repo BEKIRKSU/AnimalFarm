@@ -3,14 +3,14 @@
   color: #333;
 }
 
-.Calendar-Inputs {
+/* .Calendar-Inputs {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     gap: 1rem; 
     margin-top: 2rem;
-  }
+  } */
   
   .Key {
     flex: 0 0 50%;
