@@ -33,7 +33,6 @@ function App() {
           <Route path="/VolunteerView" element={<VolunteerView />} />
           <Route path="/ManagerView" element={<ManagerView />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );

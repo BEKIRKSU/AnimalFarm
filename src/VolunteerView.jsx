@@ -3,6 +3,7 @@ import Key from './Key';
 import Calendar from './Calendar';
 import BookingForm from './BookingForm';
 import "./VolunteerView.css"
+import Footer from './Footer';
 
 function VolunteerView() {
     return (
@@ -11,6 +12,7 @@ function VolunteerView() {
                 <Key />
                 <Calendar />
                 <BookingForm />
+                <Footer />
             </div>
         </>
     );

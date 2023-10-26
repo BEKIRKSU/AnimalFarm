@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Home.css";
+import Footer from './Footer';
 
 function Home() {
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ function Home() {
           <button onClick={handleManagerViewClick} className="manager-login-button">Manager</button>
         </div>
             </main>
+            <Footer />
         </div>
     );
 }
