@@ -18,24 +18,4 @@ function UserBooking({ data }) {
 
 export default UserBooking;
 
-// export function UserBookingList({ data }) {
-//   return (
-//       <div>
-//           <h1>Bookings</h1>
-//           {data.sort((a, b) => new Date(b.date) - new Date(a.date))
-//               .map((item) => (
-//                   <UserBooking key={item.id} data={item} />
-//               ))
-//           }
-//       </div>
-//   );
-// }
 
-//  <div>
-//           <h1>Bookings</h1>
-//           {data.sort((a, b) => new Date(b.date) - new Date(a.date))
-//               .map((item) => (
-//                   <UserBooking key={item.id} data={item} />
-//               ))
-//           }
-//       </div>
