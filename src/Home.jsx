@@ -18,7 +18,6 @@ function Home() {
             <main className="content">
               <div className="typewriter">
                 <h1>Welcome to Bekir's Citflik.</h1>
-                {/* <p>Volunteer or Manager</p> */}
                 </div>
                <div className="button-group">
           <button onClick={handleVolunteerLoginClick} className="volunteer-login-button">
