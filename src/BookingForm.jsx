@@ -22,7 +22,7 @@ const BookingForm = () => {
     return;
   }
 
-  if (session !== 'Morning' && session !== 'Evening') {
+  if (session !== 'Morning' || session !== 'Evening') {
     alert('Please select a valid session (Morning or Evening).');
     return;
   }
@@ -68,7 +68,6 @@ const BookingForm = () => {
   }
 };
   
-
   return (
     <div className='Calendar-Inputs'>
      <form className='formStyle' onSubmit={handleSubmit}>
@@ -97,6 +96,7 @@ const BookingForm = () => {
       onChange={(e) => setSession(e.target.value)}
       className='selectStyle'
     >
+      <option value="Morning" disabled>Select time of day</option>
       <option value="Morning">Morning</option>
       <option value="Evening">Evening</option>
     </select>
