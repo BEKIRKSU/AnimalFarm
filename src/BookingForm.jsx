@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; 
 import './BookingForm.css';
+import LoadingSpinner from './LoadingSpinner';
 
 const BookingForm = () => {
   
@@ -8,6 +9,7 @@ const BookingForm = () => {
   const [email, setEmail] = useState('');
   const [session, setSession] = useState('Morning');
   const [date, setDate] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,7 +33,9 @@ const BookingForm = () => {
     alert('Please select a date.');
     return;
   }
-  
+
+  setLoading(true);
+
   try {
     const existingDataResponse = await axios.get('https://animal-farm-api.onrender.com/retrievedata');
     const existingData = existingDataResponse.data;
@@ -42,6 +46,8 @@ const BookingForm = () => {
       return entry.session === session && apiDate.getTime() === userDate.getTime();
     });
   
+    setLoading(false);
+
     if (isDataExists) {
       alert('Booking for this date and session may already exist. Please refresh the page and review the calendar for a more suitable date or session to book.');
       return;
@@ -60,9 +66,12 @@ const BookingForm = () => {
       alert('Evening session is already booked for this date. Please choose another date or session.');
     } else {
       console.log('Booking successful!');
+      alert(`Thank you ${name}. You have successfully made a booking for the '${session}' session on ${date}.`);
+      window.location.reload();
     }
 
   } catch (error) {
+    setLoading(false);
     console.error("Error sending/retrieving data!", error);
  
   }
@@ -70,6 +79,7 @@ const BookingForm = () => {
   
   return (
     <div className='Calendar-Inputs'>
+      {loading && <LoadingSpinner />} 
      <form className='formStyle' onSubmit={handleSubmit}>
     <label className='labelStyle'>Name</label>
     <input
