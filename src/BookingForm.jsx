@@ -7,7 +7,7 @@ const BookingForm = () => {
   
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [session, setSession] = useState('Morning');
+  const [session, setSession] = useState('');
   const [date, setDate] = useState('');
   const [loading, setLoading] = useState(false);
 
