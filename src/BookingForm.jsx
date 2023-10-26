@@ -8,30 +8,52 @@ const BookingForm = () => {
   const [email, setEmail] = useState('');
   const [session, setSession] = useState('Morning');
   const [date, setDate] = useState('');
-  
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const data = { name, email, session, date };
 
-    try {
-      const response = await axios.post('https://animal-farm-api.onrender.com/retrievedata', data);
-      console.log(response.data);
+  if (name.trim() === '') {
+    alert('Please enter your name.');
+    return;
+  }
 
-      const isMorningBooked = response.data.morning;
-      const isEveningBooked = response.data.evening;
+  if (email.trim() === '') {
+    alert('Please enter your email.');
+    return;
+  }
 
-      if (session === 'Morning' && isMorningBooked) {
-        alert('Morning session is already booked for this date. Please choose another date or session.');
-      } else if (session === 'Evening' && isEveningBooked) {
-        alert('Evening session is already booked for this date. Please choose another date or session.');
-      } else {
-        console.log('Booking successful!');
-      }
-    } catch (error) {
-      console.error("Error sending data!", error);
+  if (session !== 'Morning' && session !== 'Evening') {
+    alert('Please select a valid session (Morning or Evening).');
+    return;
+  }
+
+  if (date === '') {
+    alert('Please select a date.');
+    return;
+  }
+
+  const data = { name, email, session, date };
+
+  try {
+    const response = await axios.post('https://animal-farm-api.onrender.com/retrievedata', data);
+    console.log(response.data);
+
+    const isMorningBooked = response.data.morning;
+    const isEveningBooked = response.data.evening;
+
+    if (session === 'Morning' && isMorningBooked) {
+      alert('Morning session is already booked for this date. Please choose another date or session.');
+    } else if (session === 'Evening' && isEveningBooked) {
+      alert('Evening session is already booked for this date. Please choose another date or session.');
+    } else {
+      console.log('Booking successful!');
     }
-  };
+
+  } catch (error) {
+    console.error("Error sending data!", error);
+  }
+}
 
   return (
     <div className='Calendar-Inputs'>
