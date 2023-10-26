@@ -5,6 +5,7 @@ function UserBooking({ data }) {
     return (
       
       <div>
+        <h1 className="bookingsTitle">Volunteer Bookings</h1>
          {data.map((booking, index) => (
         <div key={index} className="user-booking-container">
         <p><strong>Name:</strong> {booking.name}</p>
