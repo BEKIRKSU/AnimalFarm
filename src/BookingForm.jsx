@@ -10,8 +10,7 @@ const BookingForm = () => {
   const [date, setDate] = useState('');
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-
+    e.preventDefault();
 
   if (name.trim() === '') {
     alert('Please enter your name.');
@@ -32,10 +31,23 @@ const BookingForm = () => {
     alert('Please select a date.');
     return;
   }
-
-  const data = { name, email, session, date };
-
+  
   try {
+    const existingDataResponse = await axios.get('https://animal-farm-api.onrender.com/retrievedata');
+    const existingData = existingDataResponse.data;
+  
+    const isDataExists = existingData.some(entry => {
+      const apiDate = new Date(entry.date);
+      const userDate = new Date(date + "T00:00:00.000Z"); 
+      return entry.session === session && apiDate.getTime() === userDate.getTime();
+    });
+  
+    if (isDataExists) {
+      alert('Booking for this date and session already exists. Please choose another date or session.');
+      return;
+    }
+
+    const data = { name, email, session, date };
     const response = await axios.post('https://animal-farm-api.onrender.com/retrievedata', data);
     console.log(response.data);
 
@@ -51,9 +63,11 @@ const BookingForm = () => {
     }
 
   } catch (error) {
-    console.error("Error sending data!", error);
+    console.error("Error sending/retrieving data!", error);
+ 
   }
-}
+};
+  
 
   return (
     <div className='Calendar-Inputs'>
