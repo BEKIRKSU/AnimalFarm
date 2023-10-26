@@ -70,7 +70,8 @@ function Calendar() {
 
 
   return (
-    <div className="calendar">
+    <div class="container">
+  <div class="calendar">
       <div className="calendar-header">
         <button onClick={() => setDate(new Date(date.setMonth(date.getMonth() - 1)))}>&lt;</button>
         <span>{monthNames[date.getMonth()]} {date.getFullYear()}</span>
@@ -84,6 +85,7 @@ function Calendar() {
       <div className="calendar-body">
         {calendarRows}
       </div>
+    </div>
     </div>
   );
 }

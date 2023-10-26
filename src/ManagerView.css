@@ -1,3 +1,8 @@
+.manager-view-title {
+  margin-top: 2vh;
+  color: #333;
+}
+
 .Calendar-Inputs {
     display: flex;
     flex-wrap: wrap;
@@ -14,14 +19,14 @@
     align-items: center;
   }
   
-  .Calendar {
+  /* .Calendar {
     flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
-  }
+  } */
   
   .BookingForm {
     width: 100%;
@@ -56,3 +61,6 @@
 .userbooking-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+
+

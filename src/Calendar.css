@@ -1,13 +1,19 @@
-.calendar {
-    margin: 2rem 15rem 2.5rem 12.5rem; 
+.container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    height: 20vh;
+  }
+  
+  .calendar {
     background-color: #fff;
     border-radius: 0.5rem;
-    box-shadow: 0px 0.25rem 0rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0.25rem 0rem rgba(226, 226, 226, 0.1);
     font-family: 'Arial', sans-serif;
     height: 1.6rem;
-    width: 35rem; 
-    margin-top: 0rem;
-}   
+    width: 35rem;
+    margin-left: 20vh;
+  }
 
 .calendar-header {
     display: flex;
