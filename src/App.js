@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './Navbar';
-import { UserBookingList } from './UserBooking';
+import UserBooking from './UserBooking';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Footer from './Footer';
@@ -21,13 +21,14 @@ function App() {
         console.error('Error fetching data: ', error);
       });
   }, []);
+  console.log(data)
 
   return (
     <Router>
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/userbooking" element={<UserBookingList data={data} />} />
+          <Route path="/userbooking" element={<UserBooking data={data} />} />
           <Route path="/" element={<Home />} />
           <Route path="/VolunteerView" element={<VolunteerView />} />
           <Route path="/ManagerView" element={<ManagerView />} />
