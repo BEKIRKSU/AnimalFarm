@@ -27,40 +27,28 @@ body, h1, p, a {
 }
   /* /* h1 & p ----------------------------------------------------------------------------------------------  */
   
-  .typewriter {
+  .fade-in {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
     width: 100%;
   }
-  .typewriter h1,
-  .typewriter p {
-    overflow: hidden; 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .15em; 
-    animation-name: typing;
-    text-align: center;
-  }
   
-  .typewriter h1 {
-    max-width: 100%;  
-    overflow: hidden;
-    animation:
-      typing 4.5s steps(40, end) forwards,  
-      blink .75s step-end infinite;
-  }
-  
-  .typewriter p {
-    color: black;
-    width: fit-content;
+  .fade-in h1,
+  .fade-in p {
     opacity: 0;
-    animation-duration: 4s, .75s;
-    animation-timing-function: steps(40, end), step-end;
-    animation-delay: 2s, 3.5s;
-    animation-fill-mode: forwards, forwards;  
-    animation-iteration-count: 1, infinite;
-    margin-bottom: 2vh;
+    animation: fadeIn 2s forwards;
+    text-align: center;
+    margin: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
   

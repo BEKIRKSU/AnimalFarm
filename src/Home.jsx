@@ -16,7 +16,7 @@ function Home() {
     return (
         <div className="homePage">
             <main className="content">
-              <div className="typewriter">
+              <div className="fade-in">
                 <h1>Welcome to Bekir's Citflik.</h1>
                 </div>
                <div className="button-group">
