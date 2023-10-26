@@ -79,7 +79,7 @@ body, h1, p, a {
     padding: 10px 20px;
     border-radius: 25px; 
     border: none;
-    background: linear-gradient(45deg, #5E35B1, #1976D2);  
+    background: linear-gradient(45deg, #6B8BFE, #6B8BFE);  
     color: #ffffff;  
     font-family: Arial, sans-serif;  
     font-size: 16px;
@@ -93,7 +93,7 @@ body, h1, p, a {
   }
   
   .volunteer-login-button:hover, .manager-login-button {
-    background: linear-gradient(45deg, #4527A0, #1565C0);  
+    background: linear-gradient(45deg, #4F6CFF, #4F6CFF); 
     transform: translateY(-3px);  
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); 
   }
@@ -104,13 +104,13 @@ body, h1, p, a {
   }
   
   .manager-login-button {
-    background: linear-gradient(45deg, #FFB300, #FF5722);
+    background: linear-gradient(45deg, rgba(255, 105, 135, 0.6), rgba(255, 105, 135, 0.6));
     color: #ffffff;  
     transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
   }
   
   .manager-login-button:hover {
-    background: linear-gradient(45deg, #FFC107, #E64A19);
+    background: linear-gradient(45deg, rgba(255, 105, 135, 0.8), rgba(255, 105, 135, 0.8));
     transform: translateY(-3px);  
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); 
   }
