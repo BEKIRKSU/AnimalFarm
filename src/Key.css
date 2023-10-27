@@ -8,28 +8,28 @@
   height: 9.5rem;
   background-color: #f9f9f9; 
 }
-  
-  .key-item {
+
+.key-item {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
   }
   
-  .key-color {
+.key-color {
     width: 10px;
     height: 10px;
     margin-right: 5px;
   }
   
-  .key-color.morning {
+.key-color.morning {
     background-color: #4CAF50;
   }
   
-  .key-color.evening {
+.key-color.evening {
     background-color: #FFC107;
   }
   
-  .key-color.both {
+.key-color.both {
     background-color: rgb(202, 123, 123);
   }
   
