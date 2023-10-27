@@ -66,8 +66,6 @@ function Calendar() {
     calendarRows.push(<div key={`row-${i}`} className="calendar-row">{row}</div>);
 }
 
-// Input only if the colours arent there or only green or brown etc hmmm
-
 
   return (
     <div class="container">
