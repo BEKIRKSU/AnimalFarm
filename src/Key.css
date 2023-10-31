@@ -20,6 +20,10 @@
     height: 10px;
     margin-right: 5px;
   }
+
+  .key-color.white {
+    background-color: white;
+  }
   
 .key-color.morning {
     background-color: #4CAF50;
