@@ -7,7 +7,7 @@ const Key = () => {
         <h3>Time of day booked:</h3>
         <li className="key-item">
         <div className="key-color white"></div>
-        <span>Morning & Evening</span>
+        <span>None</span>
       </li>
       <li className="key-item">
         <div className="key-color morning"></div>
