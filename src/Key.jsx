@@ -11,7 +11,7 @@ const Key = () => {
       </li>
       <li className="key-item">
         <div className="key-color morning"></div>
-        <span>Morning Ony</span>
+        <span>Morning Only</span>
       </li>
       <li className="key-item">
         <div className="key-color evening"></div>
