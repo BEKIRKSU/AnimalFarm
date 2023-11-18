@@ -10,9 +10,7 @@ Explore
 
 Dive into the heart of animal welfare, where dedicated individuals collaborate to create a better world for our beloved animals.
 
-Website
-
-Visit our website: (https://animalfarm-qqai.onrender.com/ )
+Visit the website: (https://animalfarm-qqai.onrender.com/ )
 
 Data Retrieval
 
