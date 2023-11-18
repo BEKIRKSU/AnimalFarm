@@ -12,8 +12,8 @@ Dive into the heart of animal welfare, where dedicated individuals collaborate t
 
 Website
 
-Visit our website: Animal Farm
+Visit our website: (https://animalfarm-qqai.onrender.com/ )
 
 Data Retrieval
 
-Explore real-time data: Data Retrieval
+Explore real-time data: (https://animal-farm-api.onrender.com/retrievedata)https://animal-farm-api.onrender.com/retrievedata
