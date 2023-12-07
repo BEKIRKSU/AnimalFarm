@@ -5,7 +5,8 @@ import UserBooking from './UserBooking';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import VolunteerView from './VolunteerView';
-
+import ManagerView from './ManagerView';
+import Home from './Home';
 
 function App() {
   const [data, setData] = useState([]);
