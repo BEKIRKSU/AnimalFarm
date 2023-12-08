@@ -15,11 +15,11 @@
     margin-bottom: 5px;
   }
   
-.key-color {
+/* .key-color {
     width: 10px;
     height: 10px;
     margin-right: 5px;
-  }
+  } */
 
 .key-color.white {
     background-color: white;
