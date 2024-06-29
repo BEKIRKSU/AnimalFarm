@@ -5,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Link to="/" className="navbar-title">Bekir's Animal Farm</Link>
+      <Link to="/" className="navbar-title">Ciftlik</Link>
     </nav>
   );
 };
