@@ -16,6 +16,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
+          node-version: '16'  # Keep this as 16 for compatibility with current actions
+
+      - name: Use Node.js 20 for the build step
+        uses: actions/setup-node@v2
+        with:
           node-version: '20'
 
       - name: Install dependencies and build frontend
