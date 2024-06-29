@@ -2,7 +2,6 @@ import Key from './Key';
 import Calendar from './Calendar';
 import { Link } from 'react-router-dom';
 import "./ManagerView.css"
-import Footer from './Footer';
 
 function ManagerView() {
     return (
