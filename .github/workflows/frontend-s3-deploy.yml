@@ -16,8 +16,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Ensure you use Node.js 16 or later to avoid deprecation warnings
-
+          node-version: '16'  
+          
       - name: Install AWS CLI
         run: |
           sudo apt-get update
@@ -31,8 +31,8 @@ jobs:
 
       - name: Install dependencies and build frontend
         run: |
-          npm install  # Replace with your frontend build commands
-          npm run build  # Replace with your frontend build commands
+          npm install  
+          npm run build  
 
       - name: Deploy to S3
         run: |
