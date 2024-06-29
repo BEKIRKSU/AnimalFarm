@@ -16,12 +16,18 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'  # Keep this as 16 for compatibility with current actions
+          node-version: '16'  # Ensure you use Node.js 16 or later to avoid deprecation warnings
 
-      - name: Use Node.js 20 for the build step
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20'
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Configure AWS Credentials
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set region ${{ secrets.AWS_REGION }}
 
       - name: Install dependencies and build frontend
         run: |
@@ -29,9 +35,8 @@ jobs:
           npm run build  # Replace with your frontend build commands
 
       - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --exclude '.git/*' --delete
+        run: |
+          aws s3 sync build/ s3://bekiraws --delete
         env:
           AWS_S3_BUCKET: bekiraws
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
