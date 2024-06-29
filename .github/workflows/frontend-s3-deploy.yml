@@ -3,7 +3,7 @@ name: Frontend S3 Deploy
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
@@ -11,13 +11,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3  # Update to the latest version
+        uses: actions/checkout@v3  # Using v3 to ensure it's up-to-date
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3  # Update to the latest version
+        uses: actions/setup-node@v3  # Using v3 to ensure it's up-to-date
         with:
-          node-version: '20'  # Update to Node.js 20
-          
+          node-version: '20'  # Specifying Node.js 20
+
       - name: Install AWS CLI
         run: |
           sudo apt-get update
@@ -31,7 +31,7 @@ jobs:
 
       - name: Install dependencies and build frontend
         run: |
-          npm install  
+          npm install
           npm run build
 
       - name: Deploy to S3
