@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_s3_bucket" "animal_farm_bucket" {
   bucket = "animal-farm-frontend-20240708-12345"
-
+  
   versioning {
     enabled = true
   }
