@@ -1,11 +1,11 @@
 # Configure the AWS provider
 provider "aws" {
-  region = "eu-north-1" 
+  region = "eu-north-1"
 }
 
 # Define the S3 bucket
 resource "aws_s3_bucket" "animal_farm_bucket" {
-  bucket = "animal-farm-frontend-20240708-12345"  
+  bucket = "animal-farm-frontend-20240708-12345"  # Replace with your desired bucket name
   acl    = "public-read"
 
   versioning {
@@ -41,10 +41,7 @@ resource "aws_s3_bucket_policy" "animal_farm_bucket_policy" {
 
 # Upload files to the S3 bucket
 resource "aws_s3_bucket_object" "animal_farm_files" {
-  for_each = fileset("../build", "**")
+  for_each = fileset("../../build", "**")  # Assuming build directory is at animal-farm/build
 
-  bucket = aws_s3_bucket.animal_farm_bucket.bucket
-  key    = each.value
-  source = "../build/${each.value}"
-  acl    = "public-read"
+  bucket = aws_s3_bucket.animal_farm_bucket.buc
 }
