@@ -1,18 +1,13 @@
-# Configure the AWS provider
 provider "aws" {
   region = "eu-north-1"
 }
 
-# Define the S3 bucket
 resource "aws_s3_bucket" "animal_farm_bucket" {
-  bucket = "animal-farm-frontend-20240708-12345"  # Replace with a globally unique bucket name
+  bucket = "animal-farm-frontend-20240708-12345"
 
   versioning {
     enabled = true
   }
-
-  # Remove ACL setting to use default permissions
-  # acl = "public-read"
 
   website {
     index_document = "index.html"
@@ -20,7 +15,6 @@ resource "aws_s3_bucket" "animal_farm_bucket" {
   }
 }
 
-# Define the bucket policy to allow public read access
 resource "aws_s3_bucket_policy" "animal_farm_bucket_policy" {
   bucket = aws_s3_bucket.animal_farm_bucket.bucket
 
@@ -37,14 +31,10 @@ resource "aws_s3_bucket_policy" "animal_farm_bucket_policy" {
   })
 }
 
-# Upload files to the S3 bucket
 resource "aws_s3_bucket_object" "animal_farm_files" {
   for_each = fileset("../../build", "**")
 
   bucket = aws_s3_bucket.animal_farm_bucket.bucket
   key    = each.value
   source = "../../build/${each.value}"
-
-  # Remove acl setting to use default permissions
-  # acl    = "public-read"
 }
