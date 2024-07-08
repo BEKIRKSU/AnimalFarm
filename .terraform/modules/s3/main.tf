@@ -1,6 +1,6 @@
 # Configure the AWS provider
 provider "aws" {
-  region = "eu-north-1" 
+  region = "eu-north-1"
 }
 
 # Define the S3 bucket
@@ -26,16 +26,12 @@ resource "aws_s3_bucket_policy" "animal_farm_bucket_policy" {
     Version = "2012-10-17",
     Statement = [
       {
-        Effect = "Allow",
+        Effect    = "Allow",
         Principal = "*",
-        Action = [
-          "s3:GetObject"
-        ],
-        Resource = [
-          "${aws_s3_bucket.animal_farm_bucket.arn}/*"
-        ]
-      }
-    ]
+        Action    = "s3:GetObject",
+        Resource  = "${aws_s3_bucket.animal_farm_bucket.arn}/*",
+      },
+    ],
   })
 }
 
