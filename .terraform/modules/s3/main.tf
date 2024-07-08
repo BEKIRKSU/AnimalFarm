@@ -11,6 +11,9 @@ resource "aws_s3_bucket" "animal_farm_bucket" {
     enabled = true
   }
 
+  # Remove ACL setting to use default permissions
+  # acl = "public-read"
+
   website {
     index_document = "index.html"
     error_document = "error.html"
@@ -41,5 +44,7 @@ resource "aws_s3_bucket_object" "animal_farm_files" {
   bucket = aws_s3_bucket.animal_farm_bucket.bucket
   key    = each.value
   source = "../../build/${each.value}"
-  acl    = "public-read"
+
+  # Remove acl setting to use default permissions
+  # acl    = "public-read"
 }
